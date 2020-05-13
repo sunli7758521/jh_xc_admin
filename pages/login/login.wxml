@@ -1,0 +1,36 @@
+<cu-custom bgColor="bg-gradual-blue" isBack="{{false}}">
+</cu-custom>
+<form bindsubmit="formSubmit">
+  <view class="login">
+    <!-- <text class="explain">该小程序为聚辉公司生产部员工报工使用，并可查看作业单完成状态。请直接在本登陆页面输入正确账号和密码进行登入系统。</text> -->
+    <view class="form_wap">
+      <view class="flex_wap input_wap">
+        <text class="label">账号</text>
+        <input value='' id="username" name="username" class='account_input'></input>
+      </view>
+    </view>
+    <view class="form_wap">
+      <view class="flex_wap input_wap">
+        <text class="label">密码</text>
+        <input value='' type='password' id="password" name="password" class='account_input' ></input>
+      </view>
+    </view>
+  <!-- <view class="cu-form-group">
+		<view class="label">验证码</view>
+      <input placeholder="输入验证码"></input>
+      <button class="cu-btn bg-green shadow" bindtap="imgcode">验证码</button>
+   	</view> -->
+ <!-- <view class="cu-form-group margin-top">
+    <checkbox></checkbox>
+	   	<view class="title">记住密码</view>
+         <input value="" type='rememberme' id="rememberme" name="rememberme" class='rememberme' ></input>
+	</view> -->
+    <text wx:if="errInfo" class="errInfo">{{errInfo}}</text>
+    <!-- <text class="explain">准确填写，如果没有账号请注册</text> -->
+  
+    <button  class="cu-btn block bg-blue margin-tb-sm lg"  form-type="submit" >登陆</button>
+    <!-- <button class="mysubmit" type="primary" bindtap='toRegister'>注册</button> -->
+    <!-- <button open-type="getUserInfo" bindgetuserinfo="wx_userinfo" class="wx">微信登陆  </button> -->
+  
+  </view>
+</form>

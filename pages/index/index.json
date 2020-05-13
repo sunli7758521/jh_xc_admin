@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "produce": "/pages/produce/home/home",
+    "project": "/pages/project/home/home",
+    "system": "/pages/system/home/home",
+    "personal": "/pages/personal/home/home"
+  }
+}

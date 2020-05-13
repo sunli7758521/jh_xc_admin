@@ -1,0 +1,32 @@
+{
+  "pages": [
+   
+    "pages/index/index",
+    "pages/login/login",
+    "pages/produce/layout/layout",
+    "pages/produce/icon/icon",
+    "pages/logs/logs",
+    "pages/personal/home/home",
+    "pages/system/home/home",
+    "pages/produce/process/process",
+    "pages/produce/mesTask/mesTask",
+    "pages/produce/planningExecution/planningExecution",
+    "pages/produce/dataStatistical/dataStatistical",
+    "pages/project/home/home",
+    "pages/project/mes/mes",
+    "pages/project/process/process",
+    "pages/project/plan/plan",
+    "pages/project/progress/progress"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#39b54a",
+    "navigationBarTitleText": "Color UI",
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white"
+  },
+
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
+  },
+  "sitemapLocation": "sitemap21.json"
+}

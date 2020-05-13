@@ -1,0 +1,30 @@
+<produce wx:if="{{PageCur=='produce'}}"></produce>
+<project wx:if="{{PageCur=='project'}}"></project>
+<system wx:if="{{PageCur=='system'}}"></system>
+<personal wx:if="{{PageCur=='personal'}}"></personal>
+<view class="cu-bar tabbar bg-white shadow foot">
+  <view class="action" bindtap="NavChange" data-cur="produce">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/basics{{PageCur=='produce'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='produce'?'text-green':'text-gray'}}">生产管控</view>
+  </view>
+  <view class="action" bindtap="NavChange" data-cur="project">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/component{{PageCur=='project'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='project'?'text-green':'text-gray'}}">项目管理</view>
+  </view>
+  <view class="action" bindtap="NavChange" data-cur="system">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/plugin{{PageCur=='system'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='system'?'text-green':'text-gray'}}">系统设置</view>
+  </view>
+  <view class="action" bindtap="NavChange" data-cur="personal">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/about{{PageCur=='personal'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='personal'?'text-green':'text-gray'}}">个人中心</view>
+  </view>
+</view>

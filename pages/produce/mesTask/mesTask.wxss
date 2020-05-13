@@ -1,0 +1,24 @@
+/* pages/produce/mesTask/mesTask.wxss */
+.cu-custom .cu-bar {
+  min-height: 0px;
+  padding-right: 220rpx;
+  box-shadow: 0rpx 0rpx 0rpx;
+  z-index: 9999;
+  padding: 23px 5px 15px 10px;
+}
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 25px 40rpx 0px;
+  justify-content: space-between;
+}
+image {
+    max-width: 100%;
+    display: inline-block;
+    position: relative;
+    z-index: 0;
+    padding-top: 50px;
+}
+    
+  
+  

@@ -8,7 +8,8 @@ Page({
    */
   data: {
     errInfo: "",
-    captchaEnabled: true
+    captchaEnabled: true,
+    loginType:'wxapp'
   },
 
   // 提交登录页面
@@ -21,7 +22,8 @@ Page({
         data: {
           username: e.detail.value.username,
           password: e.detail.value.password,
-          rememberMe: true
+          rememberMe: true,
+          loginType:that.data.loginType
         },
         header: {
           'content-type': 'application/x-www-form-urlencoded',//解决请求不到数据

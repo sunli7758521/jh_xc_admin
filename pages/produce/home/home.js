@@ -1,5 +1,6 @@
 // pages/system/system_index/system_index.js
 const app = getApp();
+const base = require("../../../utils/base.js")
 Component({
   options: {
     addGlobalClass: true,
@@ -10,31 +11,30 @@ Component({
   data: {
     StatusBar: app.globalData.StatusBar,
     CustomBar: app.globalData.CustomBar,
-    list: [{
-        title: '工艺管理',
-        img: 'https://image.weilanwl.com/color2.0/plugin/sylb2244.jpg',
-        url: '/pages/produce/process/process'
-    },
-      {
-        title: '作业单管理',
-        img: 'https://image.weilanwl.com/color2.0/plugin/wdh2236.jpg',
-        url: '/pages/produce/mesTask/mesTask'
-      },
-      {
-        title: '生产计划与执行',
-        img: 'https://image.weilanwl.com/color2.0/plugin/qpct2148.jpg',
-        url: '/pages/produce/planningExecution/planningExecution'
-      },
-      {
-        title: '数据统计',
-        img: 'https://image.weilanwl.com/color2.0/plugin/qpczdh2307.jpg',
-        url: '/pages/produce/dataStatistical/dataStatistical'
-      }
-    ]
+    parentId:2145,
+    list:[]
   },
   lifetimes: {
     attached: function() {
       // 在组件实例进入页面节点树时执行
+      let that = this;
+    // 在组件实例进入页面节点树时执行
+    wx.request({
+        url: base.url + '/wx/menu/selectMenuByParentId',
+        method: "POST",
+        data: {parentId:that.data.parentId},
+        header: {
+          'content-type': 'application/x-www-form-urlencoded',//解决请求不到数据
+          'cookie': wx.getStorageSync("sessionid")//读取sessionid,当作cookie传入后台将PHPSESSID做session_id使用
+        },
+        success(res) {
+          that.setData({
+            list: res.data
+          })
+          console.log("======222=",that.data.list) 
+        }
+
+    })
     },
     detached: function() {
       // 在组件实例被从页面节点树移除时执行
